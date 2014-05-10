@@ -19,3 +19,7 @@ $(call inherit-product-if-exists, vendor/htc/m7spr/m7spr-vendor.mk)
 
 # Inherit from m7-common
 $(call inherit-product, device/htc/m7-common/m7-common.mk)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+        telephony.lteOnCdmaDevice=1 \
+        ro.telephony.default_network=8
